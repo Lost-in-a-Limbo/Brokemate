@@ -1,0 +1,93 @@
+:root {
+  /* Primary Color Palette */
+  --primary-navy: #1a365d;
+  --primary-blue: #2563eb;
+  --primary-teal: #0891b2;
+  
+  /* Secondary Colors */
+  --secondary-green: #10b981;
+  --secondary-emerald: #047857;
+  --secondary-mint: #6ee7b7;
+  
+  /* Accent Colors */
+  --accent-gold: #f59e0b;
+  --accent-orange: #ea580c;
+  --accent-purple: #7c3aed;
+  
+  /* Neutral Colors */
+  --neutral-white: #ffffff;
+  --neutral-light: #f8fafc;
+  --neutral-gray-100: #f1f5f9;
+  --neutral-gray-200: #e2e8f0;
+  --neutral-gray-300: #cbd5e1;
+  --neutral-gray-600: #475569;
+  --neutral-gray-700: #334155;
+  --neutral-gray-800: #1e293b;
+  --neutral-gray-900: #0f172a;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--secondary-green) 0%, var(--secondary-emerald) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-orange) 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--neutral-gray-800);
+  background-color: var(--neutral-light);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .tagline {
+    font-size: 1.2rem;
+  }
+
+  .hero .description {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
